@@ -97,17 +97,20 @@ while True:
     if ball.ycor() > 290:  # Top border
         ball.sety(290)
         ball.dy *= -1
-        winsound.PlaySound('Wall.wav', winsound.SND_ASYNC)
+        winsound.PlaySound(
+            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Wall.wav', winsound.SND_ASYNC)
     if ball.ycor() < -290:  # Bottom border
         ball.sety(-290)
         ball.dy *= -1
-        winsound.PlaySound('Wall.wav', winsound.SND_ASYNC)
+        winsound.PlaySound(
+            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Wall.wav', winsound.SND_ASYNC)
 
     if ball.xcor() > 390:  # Left side wins
         ball.goto(0, 0)
         ball.dx *= -1
         score_a += 1
-        winsound.PlaySound('Score.wav', winsound.SND_ASYNC)
+        winsound.PlaySound(
+            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Score.wav', winsound.SND_ASYNC)
         pen.clear()
         pen.write(f"Player A: {score_a}  Player B: {score_b}", align='center',
                   font=('Courier', 24, 'normal'))
@@ -117,7 +120,8 @@ while True:
         ball.dx *= -1
         score_b += 1
         pen.clear()
-        winsound.PlaySound('Score.wav', winsound.SND_ASYNC)
+        winsound.PlaySound(
+            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Score.wav', winsound.SND_ASYNC)
         pen.write(f"Player A: {score_a}  Player B: {score_b}", align='center',
                   font=('Courier', 24, 'normal'))
 
@@ -137,8 +141,10 @@ while True:
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor()+40 and ball.ycor() > paddle_a.ycor()-40):  # Left Paddle
         ball.setx(-340)
         ball.dx *= -1
-        winsound.PlaySound('Paddle.wav', winsound.SND_ASYNC)
+        winsound.PlaySound(
+            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor()+40 and ball.ycor() > paddle_b.ycor()-40):  # Right Paddle
         ball.setx(340)
         ball.dx *= -1
-        winsound.PlaySound('Paddle.wav', winsound.SND_ASYNC)
+        winsound.PlaySound(
+            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)

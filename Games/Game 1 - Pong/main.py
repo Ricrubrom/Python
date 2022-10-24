@@ -143,8 +143,12 @@ while True:
         ball.dx *= -1
         winsound.PlaySound(
             'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)
+        ball.dx *= 1.03
+        ball.dy *= 1.03
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor()+40 and ball.ycor() > paddle_b.ycor()-40):  # Right Paddle
         ball.setx(340)
         ball.dx *= -1
         winsound.PlaySound(
             'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)
+        ball.dx *= 1.03
+        ball.dy *= 1.03

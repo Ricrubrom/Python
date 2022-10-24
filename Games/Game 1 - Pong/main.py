@@ -98,19 +98,19 @@ while True:
         ball.sety(290)
         ball.dy *= -1
         winsound.PlaySound(
-            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Wall.wav', winsound.SND_ASYNC)
+            'Game 1 - Pong\Wall.wav', winsound.SND_ASYNC)
     if ball.ycor() < -290:  # Bottom border
         ball.sety(-290)
         ball.dy *= -1
         winsound.PlaySound(
-            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Wall.wav', winsound.SND_ASYNC)
+            'Game 1 - Pong\Wall.wav', winsound.SND_ASYNC)
 
     if ball.xcor() > 390:  # Left side wins
         ball.goto(0, 0)
         ball.dx *= -1
         score_a += 1
         winsound.PlaySound(
-            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Score.wav', winsound.SND_ASYNC)
+            'Game 1 - Pong\Score.wav', winsound.SND_ASYNC)
         pen.clear()
         pen.write(f"Player A: {score_a}  Player B: {score_b}", align='center',
                   font=('Courier', 24, 'normal'))
@@ -121,7 +121,7 @@ while True:
         score_b += 1
         pen.clear()
         winsound.PlaySound(
-            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Score.wav', winsound.SND_ASYNC)
+            'Game 1 - Pong\Score.wav', winsound.SND_ASYNC)
         pen.write(f"Player A: {score_a}  Player B: {score_b}", align='center',
                   font=('Courier', 24, 'normal'))
 
@@ -142,13 +142,13 @@ while True:
         ball.setx(-340)
         ball.dx *= -1
         winsound.PlaySound(
-            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)
+            'Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)
         ball.dx *= 1.03
         ball.dy *= 1.03
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor()+40 and ball.ycor() > paddle_b.ycor()-40):  # Right Paddle
         ball.setx(340)
         ball.dx *= -1
         winsound.PlaySound(
-            'F:\Archivos de Programa\Cosas\Coding\Python\Games\Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)
+            'Game 1 - Pong\Paddle.wav', winsound.SND_ASYNC)
         ball.dx *= 1.03
         ball.dy *= 1.03

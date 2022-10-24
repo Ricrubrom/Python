@@ -178,6 +178,10 @@ def main():
     width = 500
     rows = 20  # ammount of rows, has to divide the height-width evenly
     win = pygame.display.set_mode((width, width))  # creating the display
+    pygame.display.set_caption('🐍🐍 Snake 🐍🐍')
+    icon = pygame.display.set_mode((width, width))
+    icon = pygame.image.load('Game 2 - Snake\icon.png')
+    pygame.display.set_icon(icon)
     s = snake((255, 0, 0), (10, 10))  # creating the snake object
     snack = cube(randomSnack(rows, s), color=(0, 255, 0))
 
@@ -187,7 +191,7 @@ def main():
 
     while flag:
         pygame.time.delay(50)  # sets a delay so that it doesnt run too fast
-        clock.tick(30)
+        clock.tick(10)
         s.move()
         if s.body[0].pos == snack.pos:
             s.addCube()

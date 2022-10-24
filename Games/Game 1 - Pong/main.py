@@ -36,8 +36,8 @@ ball.shape("square")
 ball.color('white')
 ball.penup()    # Doesn't leave a trace behind as it moves
 ball.goto(0, 0)
-ball.dx = 1/6
-ball.dy = 1/6
+ball.dx = 1/8
+ball.dy = 1/8
 
 # Pen
 pen = turtle.Turtle()
@@ -55,25 +55,25 @@ pen.write("Player A: 0  Player B: 0", align='center',
 
 def paddle_a_up():
     y = paddle_a.ycor()
-    y += 20
+    y += 40
     paddle_a.sety(y)
 
 
 def paddle_a_down():
     y = paddle_a.ycor()
-    y -= 20
+    y -= 40
     paddle_a.sety(y)
 
 
 def paddle_b_up():
     y = paddle_b.ycor()
-    y += 20
+    y += 40
     paddle_b.sety(y)
 
 
 def paddle_b_down():
     y = paddle_b.ycor()
-    y -= 20
+    y -= 40
     paddle_b.sety(y)
 
 
@@ -114,6 +114,8 @@ while True:
         pen.clear()
         pen.write(f"Player A: {score_a}  Player B: {score_b}", align='center',
                   font=('Courier', 24, 'normal'))
+        paddle_a.goto(-350, 0)
+        paddle_b.goto(350, 0)
 
     if ball.xcor() < -390:  # Right side wins
         ball.goto(0, 0)
@@ -124,6 +126,8 @@ while True:
             'Game 1 - Pong\Score.wav', winsound.SND_ASYNC)
         pen.write(f"Player A: {score_a}  Player B: {score_b}", align='center',
                   font=('Courier', 24, 'normal'))
+        paddle_a.goto(-350, 0)
+        paddle_b.goto(350, 0)
 
     if paddle_a.ycor()+40 > 290:
         paddle_a.sety(250)
